@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+    <name>ImageRecycle</name>
+    <creationDate>01-October-2014</creationDate>
+    <author>ImageRecycle</author>
+    <authorEmail>contact@imagerecycle.com</authorEmail>
+    <authorUrl>http://www.imagerecycle.com</authorUrl>
+    <copyright/>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <version>2.0.14</version>
+    <description>COM_IMAGERECYCLE_DESCRIPTION</description>
+
+    <updateservers>
+        <server type="extension" priority="2" name="Image Recycle Updates">
+            https://www.imagerecycle.com/joomla_extension.xml
+        </server>
+    </updateservers>
+
+    <scriptfile>install.php</scriptfile>
+
+    <files folder="site">
+        <folder>assets</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+        <folder>models</folder>
+        <folder>views</folder>
+        <folder>language</folder>
+        <filename>controller.php</filename>
+        <filename>imagerecycle.php</filename>
+        <filename>queue_process.php</filename>
+        <filename>index.html</filename>
+    </files>
+    <administration>
+        <menu img="components/com_imagerecycle/assets/images/com_imagerecycle-16.png">COM_IMAGERECYCLE</menu>
+        <files folder="admin">
+            <folder>classes</folder>
+            <folder>controllers</folder>
+            <folder>extensions</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+            <folder>layouts</folder>
+            <folder>language</folder>
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>imagerecycle.php</filename>
+            <filename>index.html</filename>
+        </files>
+    </administration>
+    <extensions>
+        <extension folder="imagerecycle-content" enable="true"/>
+        <extension folder="mod_imagerecycle_stats" enable="true"/>
+    </extensions>
+</extension>

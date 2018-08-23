@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+	<name>System - JK Helper</name>
+	<author>Son Nguyen</author>
+	<creationDate>Aug 13, 2015</creationDate>
+	<copyright>(C) 2008 - 2015 PHP KUngfu. All rights reserved.</copyright>
+	<authorEmail>knigherrant@gmail.com</authorEmail>
+	<authorUrl>http://www.phpkungfu.club</authorUrl>
+	<version>1.0</version>
+	<description>Plugin helper trigger event</description>
+
+	<files>
+		<file plugin="jkhelper">jkhelper.php</file>
+		<file>index.html</file>
+		<folder>assets</folder>
+	</files>	
+	<config>
+		<fields name="params" addfieldpath="/administrator/components/com_content/models/fields">
+
+			<fieldset name="basic">
+				<field name="article_0" type="menuitem" default="" class="input" query="SELECT id, title FROM #__content" key_field="id" value_field="title" label="Thanks You Menu" description="Thanks You Menu" >
+                                    <option value="0">- Select Article -</option>
+                                </field>
+				<field name="form_0" type="menuitem" default="" class="input" label="Menu Form" description="Menu Form" />
+				<field name="spacer0" type="spacer" class="text" label="-----------------------------------" />
+				<!-- Item -->
+                                <field name="article_1" type="menuitem" default="" class="input" query="SELECT id, title FROM #__content" key_field="id" value_field="title" label="Thanks You Menu" description="Thanks You Menu" >
+                                    <option value="0">- Select Article -</option>
+                                </field>
+				<field name="form_1" type="menuitem" default="" class="input" label="Menu Form" description="Menu Form" />
+				<field name="spacer1" type="spacer" class="text" label="-----------------------------------" />
+				<!-- Item -->
+                                <field name="article_2" type="menuitem" default="" class="input" query="SELECT id, title FROM #__content" key_field="id" value_field="title" label="Thanks You Menu" description="Thanks You Menu" >
+                                    <option value="0">- Select Article -</option>
+                                </field>
+				<field name="form_2" type="menuitem" default="" class="input" label="Menu Form" description="Menu Form" />
+				<field name="spacer2" type="spacer" class="text" label="-----------------------------------" />
+				<!-- Item -->
+                                <field name="article_3" type="menuitem" default="" class="input" query="SELECT id, title FROM #__content" key_field="id" value_field="title" label="Thanks You Menu" description="Thanks You Menu" >
+                                    <option value="0">- Select Article -</option>
+                                </field>
+				<field name="form_3" type="menuitem" default="" class="input" label="Menu Form" description="Menu Form" />
+				<field name="spacer3" type="spacer" class="text" label="-----------------------------------" />
+				<!-- Item -->
+                                <field name="article_4" type="menuitem" default="" class="input" query="SELECT id, title FROM #__content" key_field="id" value_field="title" label="Thanks You Menu" description="Thanks You Menu" >
+                                    <option value="0">- Select Article -</option>
+                                </field>
+				<field name="form_4" type="menuitem" default="" class="input" label="Menu Form" description="Menu Form" />
+				<field name="spacer4" type="spacer" class="text" label="-----------------------------------" />
+				<!-- Item -->
+                                <field name="article_5" type="menuitem" default="" class="input" query="SELECT id, title FROM #__content" key_field="id" value_field="title" label="Thanks You Menu" description="Thanks You Menu" >
+                                    <option value="0">- Select Article -</option>
+                                </field>
+				<field name="form_5" type="menuitem" default="" class="input" label="Menu Form" description="Menu Form" />
+				<field name="spacer5" type="spacer" class="text" label="-----------------------------------" />
+				<!-- Item -->
+                                <field name="article_6" type="menuitem" default="" class="input" query="SELECT id, title FROM #__content" key_field="id" value_field="title" label="Thanks You Menu" description="Thanks You Menu" >
+                                    <option value="0">- Select Article -</option>
+                                </field>
+				<field name="form_6" type="menuitem" default="" class="input" label="Menu Form" description="Menu Form" />
+				<field name="spacer6" type="spacer" class="text" label="-----------------------------------" />
+				<!-- Item -->
+                                <field name="article_7" type="menuitem" default="" class="input" query="SELECT id, title FROM #__content" key_field="id" value_field="title" label="Thanks You Menu" description="Thanks You Menu" >
+                                    <option value="0">- Select Article -</option>
+                                </field>
+				<field name="form_7" type="menuitem" default="" class="input" label="Menu Form" description="Menu Form" />
+				<field name="spacer7" type="spacer" class="text" label="-----------------------------------" />
+				<!-- Item -->
+                                <field name="article_8" type="menuitem" default="" class="input" query="SELECT id, title FROM #__content" key_field="id" value_field="title" label="Thanks You Menu" description="Thanks You Menu" >
+                                    <option value="0">- Select Article -</option>
+                                </field>
+				<field name="form_8" type="menuitem" default="" class="input" label="Menu Form" description="Menu Form" />
+				<field name="spacer8" type="spacer" class="text" label="-----------------------------------" />
+				<!-- Item -->
+                                <field name="article_9" type="menuitem" default="" class="input" query="SELECT id, title FROM #__content" key_field="id" value_field="title" label="Thanks You Menu" description="Thanks You Menu" >
+                                    <option value="0">- Select Article -</option>
+                                </field>
+				<field name="form_9" type="menuitem" default="" class="input" label="Menu Form" description="Menu Form" />
+				<field name="spacer9" type="spacer" class="text" label="-----------------------------------" />
+				<!-- Item -->
+                                <field name="article_10" type="menuitem" default="" class="input" query="SELECT id, title FROM #__content" key_field="id" value_field="title" label="Thanks You Menu" description="Thanks You Menu" >
+                                    <option value="0">- Select Article -</option>
+                                </field>
+				<field name="form_10" type="menuitem" default="" class="input" label="Menu Form" description="Menu Form" />
+				<field name="spacer10" type="spacer" class="text" label="-----------------------------------" />
+				<!-- Item -->
+                                <field name="article_11" type="menuitem" default="" class="input" query="SELECT id, title FROM #__content" key_field="id" value_field="title" label="Thanks You Menu" description="Thanks You Menu" >
+                                    <option value="0">- Select Article -</option>
+                                </field>
+				<field name="form_11" type="menuitem" default="" class="input" label="Menu Form" description="Menu Form" />
+				<field name="spacer11" type="spacer" class="text" label="-----------------------------------" />
+				<!-- Item -->
+                                <field name="article_12" type="menuitem" default="" class="input" query="SELECT id, title FROM #__content" key_field="id" value_field="title" label="Thanks You Menu" description="Thanks You Menu" >
+                                    <option value="0">- Select Article -</option>
+                                </field>
+				<field name="form_12" type="menuitem" default="" class="input" label="Menu Form" description="Menu Form" />
+				<field name="spacer12" type="spacer" class="text" label="-----------------------------------" />
+				<!-- Item -->
+                                <field name="article_13" type="menuitem" default="" class="input" query="SELECT id, title FROM #__content" key_field="id" value_field="title" label="Thanks You Menu" description="Thanks You Menu" >
+                                    <option value="0">- Select Article -</option>
+                                </field>
+				<field name="form_13" type="menuitem" default="" class="input" label="Menu Form" description="Menu Form" />
+				<field name="spacer13" type="spacer" class="text" label="-----------------------------------" />
+				<!-- Item -->
+
+                                <field name="article_14" type="menuitem" default="" class="input" query="SELECT id, title FROM #__content" key_field="id" value_field="title" label="Thanks You Menu" description="Thanks You Menu" >
+                                    <option value="0">- Select Article -</option>
+                                </field>
+				<field name="form_14" type="menuitem" default="" class="input" label="Menu Form" description="Menu Form" />
+				<field name="spacer14" type="spacer" class="text" label="-----------------------------------" />
+				<!-- Item -->
+                                
+                                <field name="article_15" type="menuitem" default="" class="input" query="SELECT id, title FROM #__content" key_field="id" value_field="title" label="Thanks You Menu" description="Thanks You Menu" >
+                                    <option value="0">- Select Article -</option>
+                                </field>
+				<field name="form_15" type="menuitem" default="" class="input" label="Menu Form" description="Menu Form" />
+				<field name="spacer15" type="spacer" class="text" label="-----------------------------------" />
+				<!-- Item -->
+                                
+                                <field name="article_16" type="menuitem" default="" class="input" query="SELECT id, title FROM #__content" key_field="id" value_field="title" label="Thanks You Menu" description="Thanks You Menu" >
+                                    <option value="0">- Select Article -</option>
+                                </field>
+				<field name="form_16" type="menuitem" default="" class="input" label="Menu Form" description="Menu Form" />
+				<field name="spacer16" type="spacer" class="text" label="-----------------------------------" />
+				<!-- Item -->
+                                
+                                <field name="article_17" type="menuitem" default="" class="input" query="SELECT id, title FROM #__content" key_field="id" value_field="title" label="Thanks You Menu" description="Thanks You Menu" >
+                                    <option value="0">- Select Article -</option>
+                                </field>
+				<field name="form_17" type="menuitem" default="" class="input" label="Menu Form" description="Menu Form" />
+				<field name="spacer17" type="spacer" class="text" label="-----------------------------------" />
+				<!-- Item -->
+				
+				 <field name="article_18" type="menuitem" default="" class="input" query="SELECT id, title FROM #__content" key_field="id" value_field="title" label="Thanks You Menu" description="Thanks You Menu" >
+                                    <option value="0">- Select Article -</option>
+                                </field>
+				<field name="form_18" type="menuitem" default="" class="input" label="Menu Form" description="Menu Form" />
+				<field name="spacer18" type="spacer" class="text" label="-----------------------------------" />
+				<!-- Item -->
+				 <field name="article_18" type="menuitem" default="" class="input" query="SELECT id, title FROM #__content" key_field="id" value_field="title" label="Thanks You Menu" description="Thanks You Menu" >
+                                    <option value="0">- Select Article -</option>
+                                </field>
+				<field name="form_18" type="menuitem" default="" class="input" label="Menu Form" description="Menu Form" />
+				<field name="spacer18" type="spacer" class="text" label="-----------------------------------" />
+				<!-- Item -->
+				 <field name="article_19" type="menuitem" default="" class="input" query="SELECT id, title FROM #__content" key_field="id" value_field="title" label="Thanks You Menu" description="Thanks You Menu" >
+                                    <option value="0">- Select Article -</option>
+                                </field>
+				<field name="form_19" type="menuitem" default="" class="input" label="Menu Form" description="Menu Form" />
+				<field name="spacer19" type="spacer" class="text" label="-----------------------------------" />
+				<!-- Item -->
+				 <field name="article_20" type="menuitem" default="" class="input" query="SELECT id, title FROM #__content" key_field="id" value_field="title" label="Thanks You Menu" description="Thanks You Menu" >
+                                    <option value="0">- Select Article -</option>
+                                </field>
+				<field name="form_20" type="menuitem" default="" class="input" label="Menu Form" description="Menu Form" />
+				<field name="spacer20" type="spacer" class="text" label="-----------------------------------" />
+				<!-- Item -->
+				 <field name="article_21" type="menuitem" default="" class="input" query="SELECT id, title FROM #__content" key_field="id" value_field="title" label="Thanks You Menu" description="Thanks You Menu" >
+                                    <option value="0">- Select Article -</option>
+                                </field>
+				<field name="form_21" type="menuitem" default="" class="input" label="Menu Form" description="Menu Form" />
+				<field name="spacer21" type="spacer" class="text" label="-----------------------------------" />
+				<!-- Item -->
+				 <field name="article_22" type="menuitem" default="" class="input" query="SELECT id, title FROM #__content" key_field="id" value_field="title" label="Thanks You Menu" description="Thanks You Menu" >
+                                    <option value="0">- Select Article -</option>
+                                </field>
+				<field name="form_22" type="menuitem" default="" class="input" label="Menu Form" description="Menu Form" />
+				<field name="spacer22" type="spacer" class="text" label="-----------------------------------" />
+				<!-- Item -->
+				 <field name="article_23" type="menuitem" default="" class="input" query="SELECT id, title FROM #__content" key_field="id" value_field="title" label="Thanks You Menu" description="Thanks You Menu" >
+                                    <option value="0">- Select Article -</option>
+                                </field>
+				<field name="form_23" type="menuitem" default="" class="input" label="Menu Form" description="Menu Form" />
+				<field name="spacer23" type="spacer" class="text" label="-----------------------------------" />
+				<!-- Item -->
+				 <field name="article_24" type="menuitem" default="" class="input" query="SELECT id, title FROM #__content" key_field="id" value_field="title" label="Thanks You Menu" description="Thanks You Menu" >
+                                    <option value="0">- Select Article -</option>
+                                </field>
+				<field name="form_24" type="menuitem" default="" class="input" label="Menu Form" description="Menu Form" />
+				<field name="spacer24" type="spacer" class="text" label="-----------------------------------" />
+				<!-- Item -->
+				
+			</fieldset>
+			
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,8 @@
+h1{margin:0; padding:3px 0 10px 0; font-size:25px; font-weight:bold; color:#81c8c8; line-height:1.2em;}
+h2{margin:0; padding:15px 0 5px 0; font-size:18px; font-weight:bold; color:#333333; line-height:1.2em;}
+h3{margin:0; padding:15px 0 5px 0; font-size:14px; font-weight:normal; color:#81c8c8; line-height:1.2em;}
+h4{margin:0; padding:15px 0 5px 0; font-size:14px; font-weight:bold; color:#7b7b7b; line-height:1.2em;}
+
+.pdflink{display:block; background:url(../images/i-pdf.gif) no-repeat left; padding:3px 0 3px 25px;}
+.greyline{display:block; margin:10px 0; padding:0; height:8px; background:#3d3d3d;}
+.emphasis{color:#333; font-size:16px; padding:0 0 10px 0; font-weight:normal; width:70%; line-height:1.4em;}

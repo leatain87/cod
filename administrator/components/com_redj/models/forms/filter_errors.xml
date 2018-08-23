@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+		<field
+			name="search"
+			type="text"
+			label="COM_REDJ_FILTER"
+			hint="JSEARCH_FILTER_LABEL"
+		/>
+		<field
+			name="error_code"
+			type="list"
+			label="COM_REDJ_FILTER_ERROR_CODE"
+			description="COM_REDJ_FILTER_ERROR_CODE_DESC"
+			onchange="this.form.submit();"
+			>
+			<option value="">COM_REDJ_SELECT_ERROR_CODE</option>
+			<option value="403">403</option>
+			<option value="404">404</option>
+			<option value="500">500</option>
+		</field>
+		<field
+			name="decode"
+			type="list"
+			label="COM_REDJ_FILTER_DECODE"
+			description="COM_REDJ_FILTER_DECODE_DESC"
+			onchange="this.form.submit();"
+			default="0"
+			>
+			<option value="0">COM_REDJ_SHOW_RAW_ENTRIES</option>
+			<option value="1">COM_REDJ_SHOW_DECODED_ENTRIES</option>
+		</field>
+	</fields>
+	<fields name="list">
+		<field
+			name="fullordering"
+			type="list"
+			label="JGLOBAL_SORT_BY"
+			description="JGLOBAL_SORT_BY"
+			onchange="this.form.submit();"
+			default="e.id ASC"
+			>
+			<option value="">JGLOBAL_SORT_BY</option>
+			<option value="e.id ASC">COM_REDJ_HEADING_ERRORS_ID_ASC</option>
+			<option value="e.id DESC">COM_REDJ_HEADING_ERRORS_ID_DESC</option>
+			<option value="e.visited_url ASC">COM_REDJ_HEADING_ERRORS_VISITED_URL_ASC</option>
+			<option value="e.visited_url DESC">COM_REDJ_HEADING_ERRORS_VISITED_URL_DESC</option>
+			<option value="e.error_code ASC">COM_REDJ_HEADING_ERRORS_ERROR_CODE_ASC</option>
+			<option value="e.error_code DESC">COM_REDJ_HEADING_ERRORS_ERROR_CODE_DESC</option>
+			<option value="e.hits ASC">COM_REDJ_HEADING_ERRORS_HITS_ASC</option>
+			<option value="e.hits DESC">COM_REDJ_HEADING_ERRORS_HITS_DESC</option>
+			<option value="e.last_visit ASC">COM_REDJ_HEADING_ERRORS_LAST_VISIT_ASC</option>
+			<option value="e.last_visit DESC">COM_REDJ_HEADING_ERRORS_LAST_VISIT_DESC</option>
+			<option value="e.last_referer ASC">COM_REDJ_HEADING_ERRORS_LAST_REFERER_ASC</option>
+			<option value="e.last_referer DESC">COM_REDJ_HEADING_ERRORS_LAST_REFERER_DESC</option>
+		</field>
+		<field
+			name="limit"
+			type="limitbox"
+			class="input-mini"
+			default="25"
+			label="COM_REDJ_LIST_LIMIT"
+			description="COM_REDJ_LIST_LIMIT_DESC"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>

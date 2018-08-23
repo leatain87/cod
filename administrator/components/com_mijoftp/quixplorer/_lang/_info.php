@@ -1,0 +1,12 @@
+<?php
+/*
+* @package		MijoFTP
+* @copyright	2009-2012 Mijosoft LLC, www.mijosoft.com
+* @license		GNU/GPL http://www.gnu.org/copyleft/gpl.html
+* @license		GNU/GPL based on AceShop www.joomace.net
+*/
+
+// no direct access
+defined('_JEXEC') or die('Restricted access');
+?>
+<OPTION selected value="en">English</OPTION>

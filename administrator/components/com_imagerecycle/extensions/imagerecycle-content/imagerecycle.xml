@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="plugin" version="3.0" group="content" method="upgrade">
+    <name>Content - imagerecycle</name>
+    <creationDate>01-May-2015</creationDate>
+    <author>ImageRecycle</author>
+    <authorEmail>contact@imagerecycle.com</authorEmail>
+    <authorUrl>http://www.imagerecycle.com</authorUrl>
+    <copyright/>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <version>2.0.14</version>
+    <description>Content plugin for Imagerecycle</description>
+    <files folder="site">
+        <filename plugin="imagerecycle">imagerecycle.php</filename>
+        <filename plugin="imagerecycle">index.html</filename>
+    </files>
+</extension>

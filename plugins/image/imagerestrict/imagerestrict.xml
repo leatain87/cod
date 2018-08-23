@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="image" method="upgrade">
+  <name>Image - ImageRestrict</name>
+  <author>Fiona Coulter</author>
+  <creationDate>April 2013</creationDate>
+  <copyright>Copyright (C) 2011 Inspiration Web Design. All rights reserved.</copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <authorEmail>joomla-at-iswebdesign.co.uk</authorEmail>
+  <authorUrl>www.spiralscripts.co.uk</authorUrl>
+  <version>2.0.2</version>
+  <description>Plugin for imgen image generator, restricts views to selected user groups</description>
+  <files>
+    <filename plugin="imagerestrict">imagerestrict.php</filename>
+  </files>
+  <media destination="imgen" folder="">
+	  <filename>restricted-image.png</filename>
+  </media>						  
+  <config>
+    <fields name="params">
+      <fieldset name="Image_Restriction_Parameters" label="Plugin configuration" description="Select the parameters for image restriction">
+	  	<field name="showAlt" type="list" default="yes" label="Show Alternative Image" description="IMGEN_SHOWALT">
+		  <option value="yes">Yes</option>
+		  <option value="no">No</option>
+	    </field>	
+        <field name="imageRestricted" type="media" directory="images/imgen/" default="images/imgen/restricted-image.png" label="Restricted Image" description="IMGEN_RESTRICTEDIMAGE"/>
+	    <field name="usergroups" type="usergroup" default="" multiple="multiple" label="User Groups" description="IMGEN_USERGROUPS" size="10"/>		
+      </fieldset>
+    </fields>
+  </config>
+		<languages>
+		   <language tag="en-GB">en-GB.plg_image_imagerestrict.ini</language>
+	    </languages> 
+    <updateservers>
+        <server type="extension" priority="1" name="Image restrict">http://spiralextensions.co.uk/updates/imagerestrict.xml</server>
+    </updateservers>			 
+</extension>

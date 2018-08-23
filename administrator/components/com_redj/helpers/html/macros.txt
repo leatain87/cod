@@ -1,0 +1,452 @@
+<table>
+    <thead>
+        <tr>
+            <th width='30%' align='center'><strong>Macro</strong></th>
+            <th width='30%' align='center'><strong>Description</strong></th>
+            <th width='40%' align='center'><strong>Example</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class='macrogroup'>
+            <td align='right'><strong>URL macros</strong></td>
+            <td align='left' colspan='2'>
+                <pre>
+                    <p>http://fredbloggs:itsasecret@www.example.com:8080/path/to/Joomla/section/cat/index.php?task=view&amp;id=32#anchorthis<br />\__/&nbsp;&nbsp; \________/ \________/ \_____________/ \__/\___________________________________/ \_____________/ \________/<br />&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<br />scheme&nbsp;&nbsp;&nbsp;user&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pass&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;host&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;port&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;path&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;query&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fragment</p>
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{siteurl}</strong></td>
+            <td align='left'>Web site address</td>
+            <td align='left'><pre><p>www.example.com/path/to/Joomla</pre></p></td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{scheme}</strong></td>
+            <td align='left'>URL scheme</td>
+            <td align='left'><pre><p>http</pre></p></td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{host}</strong></td>
+            <td align='left'>URL host</td>
+            <td align='left'><pre><p>www.example.com</pre></p></td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{port}</strong></td>
+            <td align='left'>URL port number</td>
+            <td align='left'><pre><p>8080</pre></p></td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{user}</strong></td>
+            <td align='left'>User name</td>
+            <td align='left'><pre><p>fredbloggs</pre></p></td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{pass}</strong></td>
+            <td align='left'>User password</td>
+            <td align='left'><pre><p>itsasecret</pre></p></td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{path}</strong></td>
+            <td align='left'>URL path</td>
+            <td align='left'><pre><p>/path/to/Joomla/section/cat/index.php</pre></p></td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{query}</strong></td>
+            <td align='left'>URL query string</td>
+            <td align='left'><pre><p>task=view&id=32</pre></p></td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{queryfull}</strong></td>
+            <td align='left'>URL query string full (with question mark)</td>
+            <td align='left'><pre><p>?task=view&id=32</pre></p></td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{queryappend}</strong></td>
+            <td align='left'>URL query string to append (with ampersand)</td>
+            <td align='left'><pre><p>&task=view&id=32</pre></p></td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{querybuild var1=value1,...,varN=valueN}</strong></td>
+            <td align='left'>Builds URL query containing only specified variables. If a value is specified for a variable, this is assigned to the variable</td>
+            <td align='left'>
+                <pre>
+                    <p>{querybuild id,task} => id=32&task=view<br />{querybuild id,task=edit} => id=32&task=edit<br />{querybuild id,task=view,ItemId=12} => id=32&task=view&ItemId=12</p>
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{querybuildfull var1=value1,...,varN=valueN}</strong></td>
+            <td align='left'>Same as 'querybuild' but with question mark</td>
+            <td align='left'>
+                <pre>
+                    <p>{querybuildfull id,task} => ?id=32&task=view<br />{querybuildfull id,task=save} => ?id=32&task=save<br />{querybuildfull id,task,action=close} => ?id=32&task=view&action=close</p>
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{querybuildappend var1=value1,...,varN=valueN}</strong></td>
+            <td align='left'>Same as 'querybuild' but with ampersand</td>
+            <td align='left'>
+                <pre>
+                    <p>{querybuildappend id,task} => &id=32&task=view<br />{querybuildappend id,task=save} => &id=32&task=save<br />{querybuildappend id,task,action=close} => &id=32&task=view&action=close</p>
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{querydrop var1=value1,...,varN=valueN}</strong></td>
+            <td align='left'>Builds URL query removing specified variables from the original query. If a value is specified for a variable, this is assigned to the variable (that is not dropped) - <strong>ENTERPRISE VERSION ONLY</strong></td>
+            <td align='left'>
+                <pre>
+                    <p>{querydrop task} => id=32<br />{querydrop id,task=edit} => task=edit<br />{querydrop id,task=save,action=close} => task=save&action=close</p>
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{querydropfull var1=value1,...,varN=valueN}</strong></td>
+            <td align='left'>Same as 'querydrop' but with question mark - <strong>ENTERPRISE VERSION ONLY</strong></td>
+            <td align='left'>
+                <pre>
+                    <p>{querydropfull task} => ?id=32<br />{querydropfull id,task=save} => ?task=save<br />{querydropfull id,task=edit,action=close} => ?task=edit&action=close</p>
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{querydropappend var1=value1,...,varN=valueN}</strong></td>
+            <td align='left'>Same as 'querydrop' but with ampersand - <strong>ENTERPRISE VERSION ONLY</strong></td>
+            <td align='left'>
+                <pre>
+                    <p>{querydropappend task} => &id=32<br />{querydropappend id,task=save} => &task=save<br />{querydropappend id,task=edit,action=close} => &task=edit&action=close</p>
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{queryvar varname,default}</strong></td>
+            <td align='left'>Returns the current value for the variable 'varname' of the URL, or the value 'default' if 'varname' is not defined (where default = '' when not specified)</td>
+            <td align='left'>
+                <pre>
+                    <p>{queryvar task} => view<br />{queryvar id} => 32<br />{queryvar maxsize,234} => 234</p>
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{requestvar varname,default}</strong></td>
+            <td align='left'>Returns the current value for the variable 'varname' of the request, no matter about method (GET, POST, ...), or the value 'default' if 'varname' is not defined (where default = '' when not specified)</td>
+            <td align='left'>
+                <pre>
+                    <p>{requestvar id} => 32<br />{requestvar limit,100} => 100</p>
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{authority}</strong></td>
+            <td align='left'>URL authority string</td>
+            <td align='left'><pre><p>fredbloggs:itsasecret@www.example.com:8080</pre></p></td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{baseonly}</strong></td>
+            <td align='left'>Returns the base path only (empty when installed on root, i.e. it will never contains a trailing slash)</td>
+            <td align='left'><pre><p>/path/to/Joomla</pre></p></td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{pathfrombase}</strong></td>
+            <td align='left'>Returns the path without the base part</td>
+            <td align='left'><pre><p>/section/cat/index.php</pre></p></td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{pathltrim pathtotrim}</strong></td>
+            <td align='left'>Strip the string specified (pathtotrim) from the beginning of the path and returns the result</td>
+            <td align='left'>
+                <pre>
+                    <p>{pathltrim /path/to} => /Joomla/section/cat/index.php</p>
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{pathrtrim pathtotrim}</strong></td>
+            <td align='left'>Strip the string specified (pathtotrim) from the end of the path and returns the result</td>
+            <td align='left'>
+                <pre>
+                    <p>{pathrtrim /index.php} => /path/to/Joomla/section/cat</p>
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{pathfrombaseltrim pathtotrim}</strong></td>
+            <td align='left'>Same as 'pathltrim' but works on path without the base part - <strong>ENTERPRISE VERSION ONLY</strong></td>
+            <td align='left'>
+                <pre>
+                    <p>{pathfrombaseltrim /section} => /cat/index.php</p>
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{pathfrombasertrim pathtotrim}</strong></td>
+            <td align='left'>Same as 'pathrtrim' but works on path without the base part - <strong>ENTERPRISE VERSION ONLY</strong></td>
+            <td align='left'>
+                <pre>
+                    <p>{pathfrombasertrim index.php} => /section/cat/</p>
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{preg_match N}pattern{/preg_match}</strong></td>
+            <td align='left'>Returns the N-th matched pattern on the 'full source URL', where N = 0 when not specified - <strong>ENTERPRISE VERSION ONLY</strong></td>
+            <td align='left'>
+                <pre>
+                    <p>{preg_match}/([^\/]+)(\.php|\.html|\.htm)/i{/preg_match} => index.php<br />{preg_match 2}/([^\/]+)(\.php|\.html|\.htm)/i{/preg_match} => .php</p>
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{routeurl}</strong></td>
+            <td align='left'>Return the routed (relative) URL using all current variables</td>
+            <td align='left'>
+                <pre>
+                    <p>/using-joomla.html</p>
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{routeurl var1,var2,var3=myvalue,..,varN}</strong></td>
+            <td align='left'>Return the routed (relative) URL for specified variables</td>
+            <td align='left'>
+                <pre>
+                    <p>index.php?var1=value1&var2=value2&var3=myvalue&..&varN=valueN</p>
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{pathfolder N}</strong></td>
+            <td align='left'>Returns the N-th folder of the URL path - <strong>ENTERPRISE VERSION ONLY</strong></td>
+            <td align='left'>
+                <pre>
+                    <p>{pathfolder 4} => section)</p>
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{pathfolder last-N}</strong></td>
+            <td align='left'>Returns the (last-N)-th folder of the URL path, where N = 0 when not specified - <strong>ENTERPRISE VERSION ONLY</strong></td>
+            <td align='left'>
+                <pre>
+                    <p>{pathfolder last-1} => cat)</p>
+                </pre>
+            </td>
+        </tr>
+        <tr class='macrogroup'>
+            <td colspan='3' align='left'><strong>Site macros</strong></td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{sitename}</strong></td>
+            <td align='left'>Global site name</td>
+            <td align='left'><pre><p>Global $sitename configuration value</pre></p></td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{globaldescription}</strong></td>
+            <td align='left'>Global site meta description</td>
+            <td align='left'><pre><p>Global $MetaDesc configuration value</pre></p></td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{globalkeywords}</strong></td>
+            <td align='left'>Global site meta keywords</td>
+            <td align='left'><pre><p>Global $MetaKeys configuration value</pre></p></td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{username}</strong></td>
+            <td align='left'>Returns the user name of logged in user, or empty if no user is logged in</td>
+            <td align='left'><pre><p>admin</pre></p></td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{username guestvalue}</strong></td>
+            <td align='left'>Returns the user name of logged in user, or the 'guestvalue' if no user is logged in</td>
+            <td align='left'><pre><p>admin</pre></p></td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{userid}</strong></td>
+            <td align='left'>Returns the user ID of logged in user, or empty if no user is logged in</td>
+            <td align='left'><pre><p>62</pre></p></td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{userid guestvalue}</strong></td>
+            <td align='left'>Returns the user ID of logged in user, or the 'guestvalue' if no user is logged in</td>
+            <td align='left'><pre><p>62</pre></p></td>
+        </tr>
+        <tr class='macrogroup'>
+            <td colspan='3' align='left'><strong>Database macros</strong></td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{tableselect table,column,key}value{/tableselect}</strong></td>
+            <td align='left'>Returns result of a SQL query (SELECT column FROM table WHERE key = value). Supports #__ notation for table name</td>
+            <td align='left'>
+                <pre>
+                    <p>{tableselect #__users,username,id}135{/tableselect} => SELECT username FROM #__users WHERE id = 135</p>
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{preg_select table,column,key,N}pattern{/preg_select}</strong></td>
+            <td align='left'>Same as 'preg_match' but uses the matched result to execute a SQL query (SELECT column FROM table WHERE key = matchN). Supports #__ notation for table name - <strong>ENTERPRISE VERSION ONLY</strong></td>
+            <td align='left'>
+                <pre>
+                    <p>{preg_select #__content,title,id,1}/id=([0-9]+)/i{/preg_select} => SELECT title FROM #__content WHERE id = 32</p>
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{placeholder_select table,column,key1=placeholder1,..,keyN=placeholderN}</strong></td>
+            <td align='left'>Same as 'tableselect' but uses 'placeholders' and allows to specify multiple keys to build the where condition of the SQL query (SELECT column FROM table WHERE key1 = placeholder1 AND ... AND keyN = placeholderN). The 'placeholder' must be previously defined (just placeholder name needed, not ${} format). Supports #__ notation for table name - <strong>ENTERPRISE VERSION ONLY</strong></td>
+            <td align='left'>
+                <pre>
+                    <p>id=53<br />alias={placeholder_select #__content,alias,id=id} => SELECT alias FROM #__content WHERE id = 53</p>
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{placeholder_insert table,column1=placeholder1,..,columnN=placeholderN}</strong></td>
+            <td align='left'>Allows to build a SQL query to insert a row in a table using placeholders (INSERT INTO table (column1, ... columnN) VALUES (placeholder1, ... placeholderN)). All placeholders must be previously defined (just placeholder name needed, not ${} format). Returns 0 if all is ok or the error code in case of error. Supports #__ notation for table name - <strong>ENTERPRISE VERSION ONLY</strong></td>
+            <td align='left'>
+                <pre>
+                    <p>n=john<br />q={placeholder_insert #__custom,name=n} => INSERT INTO #__custom (name) VALUES ('john')</p>
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{placeholder_update table,column=placeholder,key1=placeholder1,..,keyN=placeholderN}</strong></td>
+            <td align='left'>Allows to build a SQL query to update rows in a table using placeholders (UPDATE table SET column = placeholder WHERE key1=placeholder1 AND ... AND keyN=placeholderN). All placeholders must be previously defined (just placeholder name needed, not ${} format). Returns 0 if all is ok or the error code in case of error. Supports #__ notation for table name - <strong>ENTERPRISE VERSION ONLY</strong></td>
+            <td align='left'>
+                <pre>
+                    <p>i=67<br />n=john<br />q={placeholder_update #__custom,name=n,id=i} => UPDATE #__custom SET name = 'john' WHERE id = 67</p>
+                </pre>
+            </td>
+        </tr>
+        <tr class='macrogroup'>
+            <td colspan='3' align='left'><strong>String macros</strong></td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{substr start,length}text{/substr}</strong></td>
+            <td align='left'>Returns the portion of string specified by the start and length parameters. String are zero-based (i.e. first char has index 0)</td>
+            <td align='left'>
+                <pre>
+                    <p>{substr 1,3}Joomla{/substr} => oom</p>
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{strip_tags}text{/strip_tags}</strong></td>
+            <td align='left'>Strip HTML and PHP tags from the given string</td>
+            <td align='left'>
+                <pre>
+                    <p>{strip_tags}&lt;p&gt;hello&lt;br/&gt;Joomla&lt;/p&gt;{/strip_tags} => helloJoomla</p>
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{extract N}text{/extract}</strong></td>
+            <td align='left'>Return the Nth sentence delimited with carriage return (DOS, UNIX or MAC format). All HTML tags stripped</td>
+            <td align='left'>
+                <pre>
+                    <p>{extract 1}&lt;p&gt;This is a sentence.\nAnd this is another one.&lt;/p&gt;{/extract} => This is a sentence.</p>
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{extractp N}text{/extractp}</strong></td>
+            <td align='left'>Return the Nth HTML paragraph &lt;p&gt;&lt;/p&gt;. All HTML tags stripped</td>
+            <td align='left'>
+                <pre>
+                    <p>{extractp 2}&lt;p&gt;First paragraph&lt;/p&gt;&lt;p&gt;Second paragraph&lt;/p&gt;&lt;p&gt;Third paragraph&lt;/p&gt;{/extractp} => Second paragraph</p>
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{extractdiv N}text{/extractdiv}</strong></td>
+            <td align='left'>Return the Nth HTML paragraph &lt;div&gt;&lt;/div&gt;. All HTML tags stripped</td>
+            <td align='left'>
+                <pre>
+                    <p>{extractp 3}&lt;div&gt;First paragraph&lt;/div&gt;&lt;div&gt;Second paragraph&lt;/div&gt;&lt;div&gt;Third paragraph&lt;/div&gt;{/extractp} => Third paragraph</p>
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{preg_subject N,subject}pattern{/preg_subject}</strong></td>
+            <td align='left'>Returns the N-th matched pattern on the 'subject', where N = 0 when not specified. The 'subject' can contain placeholders, but cannot contain standalone '}' chars - <strong>ENTERPRISE VERSION ONLY</strong></td>
+            <td align='left'>
+                <pre>
+                    <p>{preg_subject 2,First/Second/Third}/([^\/]+)\/([^\/]+)\/([^\/]+)/i{/preg_subject} => Second</p>
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{preg_placeholder N,placeholder}pattern{/preg_placeholder}</strong></td>
+            <td align='left'>Returns the N-th matched pattern on the 'placeholder' evaluated string, where N = 0 when not specified. The 'placeholder' must be previously defined (just placeholder name needed, not ${} format)</td>
+            <td align='left'>
+                <pre>
+                    <p>a=First/Second/Third<br />{preg_placeholder 2,a}/([^\/]+)\/([^\/]+)\/([^\/]+)/i{/preg_placeholder} => Second</p>
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{lowercase}text{/lowercase}</strong></td>
+            <td align='left'>Returns the text specified in lower case</td>
+            <td align='left'>
+                <pre>
+                    <p>{lowercase}PathToJoomla{/lowercase} => pathtojoomla</p>
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{uppercase}text{/uppercase}</strong></td>
+            <td align='left'>Returns the text specified in upper case</td>
+            <td align='left'>
+                <pre>
+                    <p>{uppercase}PathToJoomla{/uppercase} => PATHTOJOOMLA</p>
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{urldecode}text{/urldecode}</strong></td>
+            <td align='left'>Return the text decoded with urldecode</td>
+            <td align='left'>
+                <pre>
+                    <p>{urldecode}This+is+the%20text{/urldecode} => This is the text</p>
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{urlencode}text{/urlencode}</strong></td>
+            <td align='left'>Return the text encoded with urlencode</td>
+            <td align='left'>
+                <pre>
+                    <p>{urlencode}This is the text{/urlencode} => This+is+the+text</p>
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{rawurldecode}text{/rawurldecode}</strong></td>
+            <td align='left'>Return the text decoded with rawurldecode (i.e. plus is not decoded)</td>
+            <td align='left'>
+                <pre>
+                    <p>{rawurldecode}This+is+the%20text{/rawurldecode} => This+is+the text</p>
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{rawurlencode}text{/rawurlencode}</strong></td>
+            <td align='left'>Return the text encoded with rawurlencode (i.e. blanks not encoded with plus)</td>
+            <td align='left'>
+                <pre>
+                    <p>{rawurlencode}This is the text{/rawurlencode} => This%20is%20the%20text</p>
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td align='right'><strong>{str_replace 'search','replace'}text{/str_replace}</strong></td>
+            <td align='left'>Replace all occurrences of the search string with the replacement string and return result</td>
+            <td align='left'>
+                <pre>
+                    <p>{str_replace 'World','Joomla'}Hello World!{/str_replace} => Hello Joomla!</p>
+                </pre>
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0" method="upgrade" client="site">
+	<name>Custom HTML advanced</name>
+	<author>Pluginaria.com</author>
+	<creationDate>February 2013</creationDate>
+	<copyright>Copyright (C) 2013 Pluginaria.com.</copyright>
+	<license>GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html</license>
+	<authorEmail>feedback@jtricks.com</authorEmail>
+	<authorUrl>www.pluginaria.com</authorUrl>
+	<version>2.0</version>
+	<description>
+            Allows to place custom HTML into module position.
+            Unlike standard mod_custom, can modify module chrome it is displayed with (to remove boxes
+            around the module usually imposed by some templates in certain module positions).
+	</description>
+	<languages>
+            <language tag="en-GB">language/en-GB/en-GB.mod_custom_advanced.ini</language>
+        </languages>
+	<files>
+		<filename module="mod_custom_advanced">mod_custom_advanced.php</filename>
+	</files>                                                                                                                        
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="customHtml"
+                                       type="textarea"
+                                       filter="raw"
+                                       default="" label="Custom HTML" description="" rows="32" cols="40"/>
+				<field name="moduleStyle"
+                                       type="text" default=""
+                                       label="Override module inclusion style (chrome) set by template"
+                                       description="Use 'none' (without quotes) to remove chrome imposed by template."/>
+			</fieldset>
+			<fieldset name="HTML_HEADER">
+				<field name="cssOverride"
+                                       type="textarea" default=""
+                                       label="CSS style overrides"
+                                       description="Will be placed inside style tag in HTML header."
+                                       filter="raw"
+                                       rows="16" cols="40"/>
+				<field name="styleSheet"
+                                       type="text" default=""
+                                       label="CSS style sheet"
+                                       description="Style sheet (.css) file. Fill be referenced in HTML header."
+                                       filter="raw"/>
+			</fieldset>
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option	value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option	value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

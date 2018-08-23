@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config
+        addrulepath="/administrator/components/com_imagerecycle/models/rules"
+        addfieldpath="/administrator/components/com_imagerecycle/models/fields">
+    <fieldset name="main" label="COM_IMAGERECYCLE_CONFIG_MAIN_LABEL" description="COM_IMAGERECYCLE_CONFIG_MAIN_DESC">
+        <field
+                name="quota_consumption"
+                type="quota"
+                label="COM_IMAGERECYCLE_CONFIG_OPTIMIZATION_QUOTA_USAGE"
+                description="COM_IMAGERECYCLE_CONFIG_OPTIMIZATION_QUOTA_USAGE_DESC"
+                default=""
+                class="input"
+        />
+
+        <field
+                name="api_url"
+                type="hidden"
+                label="COM_IMAGERECYCLE_CONFIG_API_URL_LABEL"
+                description="COM_IMAGERECYCLE_CONFIG_API_URL_DESC"
+                default="https://api.imagerecycle.com/v1/"
+                size="100"
+        />
+        <field
+                name="api_key"
+                type="text"
+                label="COM_IMAGERECYCLE_CONFIG_API_KEY_LABEL"
+                description="COM_IMAGERECYCLE_CONFIG_API_KEY_DESC"
+                default=""
+                class="input-xlarge"
+                size="100"
+        />
+        <field
+                name="api_secret"
+                type="text"
+                label="COM_IMAGERECYCLE_CONFIG_API_SECRET_LABEL"
+                description="COM_IMAGERECYCLE_CONFIG_API_SECRET_DESC"
+                default=""
+                class="input-xlarge"
+                size="100"
+        />
+        <field
+                name="installed_time"
+                type="hidden"
+                label="Installed Time"
+                description=""
+                default="" size="20"
+        />
+        <field
+                name="include_folders"
+                type="foldertree"
+                label="COM_IMAGERECYCLE_CONFIG_INCLUDE_FOLDERS_LABEL"
+                description="COM_IMAGERECYCLE_CONFIG_INCLUDE_FOLDERS_DESC"
+                default="images,media,templates"
+                class="input-xlarge"
+                size="100"
+        />
+
+        <field
+                name="resize_auto"
+                type="radio"
+                label="COM_IMAGERECYCLE_CONFIG_RESIZE_NEWMEDIA_AUTO"
+                description="COM_IMAGERECYCLE_CONFIG_RESIZE_NEWMEDIA_AUTO_DESC"
+                class="btn-group"
+                default="0">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="spacer1" type="spacer" class="text"
+               label="COM_IMAGERECYCLE_CONFIG_RESIZE_IMAGE_DESC"
+        />
+        <field
+                name="resize_image"
+                type="text"
+                label="COM_IMAGERECYCLE_CONFIG_RESIZE_IMAGE_LABEL"
+                description="COM_IMAGERECYCLE_CONFIG_RESIZE_IMAGE_DESC"
+                default="1600"
+                class="input-mini"
+                size="20"
+        />
+        <field
+                name="min_size"
+                type="text"
+                label="COM_IMAGERECYCLE_CONFIG_MIN_SIZE_LABEL"
+                description="COM_IMAGERECYCLE_CONFIG_MIN_SIZE_DESC"
+                default="1"
+                class="input-mini"
+                size="20"
+        />
+        <field
+                name="max_size"
+                type="text"
+                label="COM_IMAGERECYCLE_CONFIG_MAX_SIZE_LABEL"
+                description="COM_IMAGERECYCLE_CONFIG_MAX_SIZE_DESC"
+                default="5120"
+                class="input-mini"
+                size="20"
+        />
+        <field
+                name="compression_type"
+                type="hidden"
+                default="lossy"
+                label="COM_IMAGERECYCLE_CONFIG_COMPRESSION_TYPE_DEFAULT_LABEL"
+                description="COM_IMAGERECYCLE_CONFIG_COMPRESSION_TYPE_DEFAULT_DESC">
+
+        </field>
+        <field
+                name="compression_type_pdf"
+                type="list"
+                default="lossy"
+                label="COM_IMAGERECYCLE_CONFIG_COMPRESSION_TYPE_PDF_LABEL"
+                description="COM_IMAGERECYCLE_CONFIG_COMPRESSION_TYPE_DEFAULT_DESC">
+            <option value="lossy">COM_IMAGERECYCLE_CONFIG_LOSSY</option>
+            <option value="lossless">COM_IMAGERECYCLE_CONFIG_LOSSLESS</option>
+            <option value="none">COM_IMAGERECYCLE_CONFIG_NO_COMPRESSIOIN</option>
+        </field>
+        <field
+                name="compression_type_png"
+                type="list"
+                default="lossy"
+                label="COM_IMAGERECYCLE_CONFIG_COMPRESSION_TYPE_PNG_LABEL"
+                description="COM_IMAGERECYCLE_CONFIG_COMPRESSION_TYPE_DEFAULT_DESC">
+            <option value="lossy">COM_IMAGERECYCLE_CONFIG_LOSSY</option>
+            <option value="lossless">COM_IMAGERECYCLE_CONFIG_LOSSLESS</option>
+            <option value="none">COM_IMAGERECYCLE_CONFIG_NO_COMPRESSIOIN</option>
+        </field>
+        <field
+                name="compression_type_jpg"
+                type="list"
+                default="lossy"
+                label="COM_IMAGERECYCLE_CONFIG_COMPRESSION_TYPE_JPG_LABEL"
+                description="COM_IMAGERECYCLE_CONFIG_COMPRESSION_TYPE_DEFAULT_DESC">
+            <option value="lossy">COM_IMAGERECYCLE_CONFIG_LOSSY</option>
+            <option value="lossless">COM_IMAGERECYCLE_CONFIG_LOSSLESS</option>
+            <option value="none">COM_IMAGERECYCLE_CONFIG_NO_COMPRESSIOIN</option>
+        </field>
+        <field
+                name="compression_type_gif"
+                type="list"
+                default="lossy"
+                label="COM_IMAGERECYCLE_CONFIG_COMPRESSION_TYPE_GIF_LABEL"
+                description="COM_IMAGERECYCLE_CONFIG_COMPRESSION_TYPE_DEFAULT_DESC">
+            <option value="lossy">COM_IMAGERECYCLE_CONFIG_LOSSY</option>
+            <option value="lossless">COM_IMAGERECYCLE_CONFIG_LOSSLESS</option>
+            <option value="none">COM_IMAGERECYCLE_CONFIG_NO_COMPRESSIOIN</option>
+        </field>
+
+        <field
+                name="send_email"
+                type="radio"
+                label="COM_IMAGERECYCLE_CONFIG_SEND_EMAIL"
+                description="COM_IMAGERECYCLE_CONFIG_SEND_EMAIL_DESC"
+                class="btn-group"
+                default="1">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+
+    </fieldset>
+
+    <fieldset name="advanced" label="COM_IMAGERECYCLE_CONFIG_ADVANCED_LABEL"
+              description="COM_IMAGERECYCLE_CONFIG_ADVANCED_DESC">
+        <field
+                name="optimize_newmedia_auto"
+                type="radio"
+                label="COM_IMAGERECYCLE_CONFIG_OPTIMIZE_NEWMEDIA_AUTO"
+                description="COM_IMAGERECYCLE_CONFIG_OPTIMIZE_NEWMEDIA_AUTO_DESC"
+                class="btn-group"
+                default="0">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+
+        <field
+                name="auto_method"
+                type="list"
+                default="ajax"
+                label="COM_IMAGERECYCLE_CONFIG_SYNC_METHOD_LABEL"
+                description="COM_IMAGERECYCLE_CONFIG_SYNC_METHOD_DESC">
+            <option value="none">COM_IMAGERECYCLE_CONFIG_NONE</option>
+            <option value="ajax">COM_IMAGERECYCLE_CONFIG_AUTO_AJAX_METHOD</option>
+            <option value="crontab">COM_IMAGERECYCLE_CONFIG_AUTO_CRONTAB</option>
+        </field>
+        <field
+                name="run_periodicity"
+                type="list"
+                label="COM_IMAGERECYCLE_CONFIG_SYNC_TIME_LABEL"
+                description="COM_IMAGERECYCLE_CONFIG_SYNC_TIME_DESC"
+                default="5">
+            <option value="0">Never</option>
+            <option value="1">COM_IMAGERECYCLE_CONFIG_DURATION_MIN_1</option>
+            <option value="5">COM_IMAGERECYCLE_CONFIG_DURATION_MIN_5</option>
+            <option value="15">COM_IMAGERECYCLE_CONFIG_DURATION_MIN_15</option>
+            <option value="30">COM_IMAGERECYCLE_CONFIG_DURATION_MIN_30</option>
+            <option value="60">COM_IMAGERECYCLE_CONFIG_DURATION_HOUR_1</option>
+            <option value="300">COM_IMAGERECYCLE_CONFIG_DURATION_HOUR_5</option>
+            <option value="600">COM_IMAGERECYCLE_CONFIG_DURATION_HOUR_10</option>
+            <option value="1440">COM_IMAGERECYCLE_CONFIG_DURATION_HOUR_24</option>
+            <option value="2880">COM_IMAGERECYCLE_CONFIG_DURATION_HOUR_48</option>
+        </field>
+
+        <field
+                name="crontab_url"
+                type="note"
+                description="COM_IMAGERECYCLE_CONFIG_SYNC_TASK_URL_DESC"
+                label="COM_IMAGERECYCLE_CONFIG_SYNC_TASK_URL_LABEL"
+                readonly="true"
+                size="300"
+        />
+        <field name="last_run" type="hidden" default=""/>
+
+
+    </fieldset>
+    <fieldset
+            name="permissions"
+            label="JCONFIG_PERMISSIONS_LABEL"
+            description="JCONFIG_PERMISSIONS_DESC"
+    >
+
+        <field
+                name="rules"
+                type="rules"
+                label="JCONFIG_PERMISSIONS_LABEL"
+                filter="rules"
+                validate="rules"
+                component="com_imagerecycle"
+                section="component"/>
+    </fieldset>
+</config>

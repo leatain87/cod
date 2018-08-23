@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="image" method="upgrade">
+  <name>Image - Watermark</name>
+  <author>Fiona Coulter</author>
+  <creationDate>April 2013</creationDate>
+  <copyright>Copyright (C) 2011 Inspiration Web Design. All rights reserved.</copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <authorEmail>joomla-at-iswebdesign.co.uk</authorEmail>
+  <authorUrl>www.spiralscripts.co.uk</authorUrl>
+  <version>2.0.2</version>
+  <description>Image plugin to embed watermark into resized image</description>
+  <files>
+    <filename plugin="watermark">watermark.php</filename>
+  </files>
+  <media destination="imgen" folder="">
+	  <filename>copyright-sample.png</filename>
+  </media>						  
+  <config>
+    <fields name="params">
+      <fieldset name="Watermark_Parameters" label="Watermark configuration" description="Select the parameters for watermark">
+        <field name="imageWatermark" type="media" directory="images/imgen/" default="images/imgen/copyright-sample.png" label="Watermark Image" description="IMGEN_WATERMARK"/>
+        <field name="watermarkOpacity" type="text" default="10" label="Watermark Opacity" description="IMGEN_WATERMARK_OPACITY"/>
+        <field name="minImageSize" type="text" default="" label="Minimum Image Size" description="IMGEN_MINIMAGESIZE"/>		
+		<field name="watermarkStretch" type="radio" default="yes" label="Stretch Watermark?" description="IMGEN_STRETCHIMAGE">
+		  <option value="no">no</option>
+		  <option value="yes">yes</option>
+		</field>
+		<field name="watermarkLeftPos" type="text" default="0" label="Watermark Left(Right) Position" description="IMGEN_LEFTPOS" />	
+		<field name="watermarkTopPos" type="text" default="0" label="Watermark Top(Bottom) Position" description="IMGEN_TOPPOS" />				
+      </fieldset>
+    </fields>
+  </config>
+		<languages>
+		   <language tag="en-GB">en-GB.plg_image_watermark.ini</language>
+	    </languages>  
+    <updateservers>
+        <server type="extension" priority="1" name="Watermark">http://spiralextensions.co.uk/updates/watermark.xml</server>
+    </updateservers>			
+</extension>

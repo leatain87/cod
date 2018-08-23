@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.0.8" client="administrator" method="upgrade">
+    <name>ImageRecycle Statistics</name>
+    <author>ImageRecycle</author>
+    <authorEmail>contact@imagerecycle.com</authorEmail>
+    <creationDate>01-February-2016</creationDate>
+    <authorUrl>http://www.joomunited.com</authorUrl>
+    <copyright/>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <version>2.0.14</version>
+    <description>Your ImageRecycle Statistics</description>
+    <files>
+        <filename module="mod_imagerecycle_stats">mod_imagerecycle_stats.php</filename>
+        <folder>tmpl</folder>
+        <filename>helper.php</filename>
+    </files>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+
+            </fieldset>
+        </fields>
+    </config>
+</extension>

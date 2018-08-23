@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="content" method="upgrade">
+	<name>Content ImageResizer</name>
+	<author>Fiona Coulter</author>
+	<creationDate>April 2013</creationDate>
+	<copyright>Inspiration Web Design</copyright>
+	<license>GPL</license>
+	<authorEmail>joomla-at-iswebdesign.co.uk</authorEmail>
+	<authorUrl>www.spiralscripts.co.uk</authorUrl>
+	<version>2.0.3</version>
+	<description>Content Plugin to automatically resize images</description>
+	<files>
+		<filename plugin="imageResizer">imageResizer.php</filename>
+		<folder>assets</folder>
+	</files>
+	<config>
+	<fields name="params">
+	<fieldset name="basic" label="Plugin Parameters" description="Configure Plugin">
+	    <field name="resizeBlog" type="radio" default="yes" label="Resize in Blog View" description="IMGEN_RESIZEBLOG">
+			<option value="yes">yes</option>
+			<option value="no">no</option>
+		</field>	
+    	<field name="thumbWidth" type="text" default="100" label="Blog Thumbnail Width" description="IMGEN_BLOGWIDTH" />									
+ 		<field name="thumbHeight" type="text" default="100" label="Blog Thumbnail Height" description="IMGEN_BLOGHEIGHT" />	
+        <field name="resizeArticle" type="radio" default="yes" label="Resize in Article View" description="IMGEN_RESIZEARTICLE">
+			<option value="yes">yes</option>
+			<option value="no">no</option>
+		</field>				
+		<field name="articleWidth" type="text" default="300" label="Article Image Width" description="IMGEN_ARTICLEWIDTH" />									
+ 		<field name="articleHeight" type="text" default="300" label="Article Image Height" description="IMGEN_ARTICLEHEIGHT" />
+        <field name="resizeFeatured" type="radio" default="yes" label="Resize in Featured/Front Page View" description="IMGEN_RESIZEFEATURED">
+			<option value="yes">yes</option>
+			<option value="no">no</option>
+		</field>				
+		<field name="frontpageWidth" type="text" default="200" label="Featured Page Image Width" description="IMGEN_FRONTPAGEWIDTH" />									
+ 		<field name="frontpageHeight" type="text" default="200" label="Featured Page Image Height" description="IMGEN_FRONTPAGEHEIGHT" />	
+        <field name="encodeName" type="radio" default="yes" label="Encode Image Name" description="IMGEN_ENCODENAME">
+			<option value="yes">yes</option>
+			<option value="no">no</option>
+		</field>	
+        <field name="htmlWidthHeight" type="radio" default="yes" label="HTML W/H" description="IMGEN_HTMLWIDTHHEIGHT">
+			<option value="yes">yes</option>
+			<option value="no">no</option>
+		</field>																																																																																																																															
+        <field name="showInCustom" type="radio" default="no" label="Show in Custom Module" description="IMGEN_SHOWINCUSTOM">
+			<option value="yes">yes</option>
+			<option value="no">no</option>
+		</field>	
+		<field name="useLazyLoad" type="radio" default="no" label="Use Lazy Loading" description="IMGEN_USELAZYLOADING">
+			<option value="yes">yes</option>
+			<option value="no">no</option>
+		</field>	
+		<field name="loadJQuery" type="radio" default="yes" label="Load Jquery?" description="IMGEN_LOADJQUERY">
+			<option value="yes">yes</option>
+			<option value="no">no</option>
+		</field>																																																																																																																														
+																																																																																																																															
+	</fieldset>										
+    </fields>	
+	</config>
+		<languages>
+		   <language tag="en-GB">en-GB.plg_content_imageResizer.ini</language>
+	    </languages>
+    <updateservers>
+        <server type="extension" priority="1" name="Image Resizer">http://spiralextensions.co.uk/updates/imageresizer.xml</server>
+    </updateservers>			
+</extension>	

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="2.5" method="upgrade">
+	<name>Imgen Image Generator</name>
+	<creationDate>2015-05-08</creationDate>
+	<packagename>imgen</packagename>
+	<version>2.1.3</version>
+	<author>Spiral Scripts</author>
+	<copyright>Copyright (C) 2015 Spiral Scripts. All rights reserved.</copyright>	
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>	
+	<packager>Spiral Scripts</packager>
+	<packagerurl></packagerurl>
+	<description><![CDATA[This extension package allows automatically resize Joomla images]]></description>
+	<update></update>
+	<files folder="packages">
+		<file type="component" id="com_imgen">com_imgen.zip</file>
+		<file type="plugin" id="imageResizer" group="content">imageResizer.zip</file>
+		<file type="plugin" id="imagerestrict" group="image">plug_imagerestrict.zip</file>
+		<file type="plugin" id="watermark" group="image">plug_watermark.zip</file>
+	</files>
+    <updateservers>
+        <server type="extension" priority="1" name="Imgen Package">http://spiralextensions.co.uk/updates/imgenpackage.xml</server>
+    </updateservers>			 	
+</extension>

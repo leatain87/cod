@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+	<name>COM_MIJOFTP</name>
+	<author>Mijosoft LLC</author>
+	<creationDate>March 2015</creationDate>
+	<authorEmail>info@mijosoft.com</authorEmail>
+	<authorUrl>http://mijosoft.com</authorUrl>
+	<copyright>Copyright (C) Mijosoft LLC, mijosoft.com</copyright>
+	<license>GNU/GPL, http://www.gnu.org/licenses/gpl-2.0.html</license>
+	<version>1.1.4</version>
+	<description>MijoFTP is a smart, fast and lightweight file manager component. It operates from Joomla back-end so you don't have to use any FTP program anymore.</description>
+	
+	<administration>
+		<menu img="components/com_mijoftp/assets/images/icon-16-mijoftp.png">COM_MIJOFTP</menu>
+		<files folder="admin">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>index.html</filename>
+			<filename>mijoftp.php</filename>
+			<folder>assets</folder>
+			<folder>mvc</folder>
+			<folder>quixplorer</folder>
+		</files>
+		
+		<languages folder="languages">
+			<language tag="en-GB">en-GB.com_mijoftp.ini</language>
+			<language tag="en-GB">en-GB.com_mijoftp.sys.ini</language>
+			<language tag="en-GB">en-GB.com_mijoftp.menu.ini</language>
+		</languages>
+	</administration>
+	
+	<scriptfile>script.php</scriptfile>
+	
+	<updateservers>
+		<server type="extension" priority="1" name="MijoFTP Updates">http://mijosoft.com/joomla_updates.xml</server>
+	</updateservers>
+</extension>

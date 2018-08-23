@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+   <name>Canonical Links</name>
+   <author>Marko Dedovic / ManageCMS.com</author>
+   <creationDate>April 2018</creationDate>
+   <copyright>Copyright (C) Marko Dedovic. All rights reserved.</copyright>
+   <authorEmail>marko@managecms.com</authorEmail>
+   <authorUrl>www.managecms.com</authorUrl>
+   <version>3.44</version>
+   <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+   <description>Plugin which adds correct canonical links for Joomla, K2, Virtuemart and EasyBlog</description>
+   <scriptfile>canonicallinks.scriptfile.php</scriptfile>
+   <files>
+      <filename plugin="canonicallinks">canonicallinks.php</filename>
+      <folder>components</folder>
+   </files>
+   <updateservers>
+      <server type="extension" priority="1" name="Canonical Links All in One Updates">https://www.managecms.com/canonical-links.xml</server>
+   </updateservers>
+   <config>
+      <fields name="params">
+         <fieldset name="basic">
+            <field name="remove_trailing_slash" type="radio"
+               class="btn-group btn-group-yesno"
+               default="1"
+               description="Choose whether to remove trailing slash from canonical links, www.example.com/ vs www.example.com"
+               label="Remove trailing slash"
+               >
+               <option value="0">JNO</option>
+               <option value="1">JYES</option>
+            </field>
+            <field name="unset_self_canonical" type="radio"
+               class="btn-group btn-group-yesno"
+               default="0"
+               description="If you are viewing a link which is equal to the canonical version, unset the canonical tag."
+               label="Unset canonical tags&lt;br/&gt;on canonical pages"
+               >
+               <option value="0">JNO</option>
+               <option value="1">JYES</option>
+            </field>
+            <field name="redirect" type="radio"
+               class="btn-group btn-group-yesno"
+               default="0"
+               description="If you turn this option on, any time a visitor goes to a non-canonical version of the page, they will be redirected in a 301 manner to the canonical version"
+               label="Permanent Redirect"
+               >
+               <option value="0">JNO</option>
+               <option value="1">JYES</option>
+            </field>
+            <field name="redirect_slashed" type="radio"
+               class="btn-group btn-group-yesno"
+               default="0"
+               showon="redirect:1"
+               description="If the canonical link is without a trailing slash http://www.example.com, and you are viewing http://www.example.com/, should redirection be performed. Defaults to off as this can cause an infinite redirection loop on some servers. Always disable if you end up with blank pages."
+               label="Redirect between slashed and non-slashed links"
+               >
+               <option value="0">JNO</option>
+               <option value="1">JYES</option>
+            </field>
+            <field name="ignore_query" type="radio"
+               class="btn-group btn-group-yesno"
+               default="1"
+               description="If enabled, links with query in url (everything after the question mark in the link, if it exists) will not be redirected to the canonical page, which is useful if you have a dedicated print page (your url contains something like ?print=1) etc. It's also used to compare currently opened link with the canonical version, to determine whether extra options should be applied, like unsetting canonicals when on the canonical page option or the canonical link override."
+               label="Ignore query in link?"
+               >
+               <option value="0">JNO</option>
+               <option value="1">JYES</option>
+            </field>
+            <field name="ignore_specific_queries" type="text"
+                   showon="ignore_query:0"
+                   description="Comma separated list of query variables that should be ignored, e.g. 'print,filter'. Useful if you want to prevent redirection for particular variables only."
+                   label="Ignore specific query variables&lt;br/&gt;&lt;small&gt;(advanced)&lt;/small&gt;"
+                   hint="print,filter" />
+            <field name="domain" type="url" description="If your site can be accessed through more than one domain, enter the canonical one here. It will be used for all canonical links instead of the domain through which the site was accessed." label="Canonical domain" filter="url" validate="url" />
+            <field name="override_canonicals" type="textarea" description="To override canonical link for a page, insert full link, then vertical divider |, and then the canonical link. Insert as many overrides as you want, one override per line." label="Override canonicals&lt;br /&gt;&lt;small&gt;Normally you do not&lt;br /&gt;need to use this option&lt;/small&gt;" hint="http://example.com/duplicate|http://example.com/canonical" rows="10" cols="15" />
+            <field name="remove_canonicals" type="textarea" description="Insert full links for all pages where you do not want to have canonical link outputted. One link per line. You can also use wildcards so that all links under certain path are excluded. Writing example.com/exlude-this/* will remove everything exclude-this, and everything under it. To use wildcard always end it with /*" label="Remove canonicals" hint="http://example.com/exclude or http://example.com/exclude/*" rows="10" cols="15" />
+         </fieldset>
+         <fieldset name="k2" label="K2 Options">
+            <field name="k2tagmenu" type="menuitem" published="1" default="" label="Default K2 tag menu" description="Choose a menu to which canonical links of K2 tags will be attached. If nothing is selected, the first valid menu found would be used.">
+               <option value="">None selected</option>
+            </field>
+         </fieldset>
+      </fields>
+   </config>
+</extension>

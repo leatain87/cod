@@ -1,0 +1,20 @@
+
+# @version:	2.6.1.a2a4257 - 2014 September 15 10:13:22 +0300
+# @package:	jbetolo
+# @subpackage:	jbetolo
+# @copyright:	Copyright (C) 2010 - 2014 jproven.com. All rights reserved. 
+# @license:	GNU General Public License Version 2, or later http://www.gnu.org/licenses/gpl.html
+
+
+<FilesMatch "\.(css|js|eot|ttf|svg|otf)$">
+        FileETag None
+        <IfModule mod_headers.c>
+                Header set X-Powered-By "jbetolo/2.0"
+        </IfModule>
+</FilesMatch>
+
+<IfModule mod_headers.c>
+        <FilesMatch "\.(EXTS_REPLACE)$">
+                Header append Content-Encoding gzip
+        </FilesMatch>
+</IfModule>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="imgen Layout">
+		<message>
+			<![CDATA[imgen Layout]]>
+		</message>
+	</layout>
+	<state>
+		<name>imgen Layout</name>
+		<description>imgen Layout</description>
+		<params>
+		</params>
+	</state>
+</metadata>

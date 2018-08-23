@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <fieldset name="global" label="IMGEN configuration" description="Select the global parameters for IMGEN">
+		<field name="defaultFolder" type="text" default="images/" label="Default Source Images Folder" description="IMGEN_DEFAULTFOLDER"/>
+		<field name="defaultWidth" type="text" default="" label="Default Width (in pixels)" description="IMGEN_DEFAULTWIDTH"/>
+		<field name="defaultHeight" type="text" default="" label="Default Height (in pixels)" description="IMGEN_DEFAULTHEIGHT"/>
+        <field name="defaultQuality" type="text" default="100" label="Default Image Quality" description="IMGEN_DEFAULTQUALITY"/>			
+		<field name="cacheImages" type="radio" default="yes" label="Cache Images" description="IMGEN_CACHE_IMAGES">
+			<option value="yes">yes (recommended)</option>
+			<option value="no">no</option>
+		</field>
+		<field name="cacheTime" type="text" size="10" default="60" label="Cache Time" description="IMGEN_CACHE_TIME" />
+		<field name="cacheFolder" type="text" default="images/imgen/" label="Default Resized Images Folder" description="IMGEN_RESIZEDFOLDER"/>		
+		<field name="httpImages" type="radio" default="no" label="Allow HTTP Images" description="IMGEN_HTTP_IMAGES">
+			<option value="yes">yes</option>
+			<option value="no">no (recommended)</option>
+		</field>
+	    <field name="displayErrors" type="radio" default="no" label="Display Error Messages" description="IMGEN_DISPLAYERRORS">
+		  <option value="yes">yes</option>
+		  <option value="no">no (recommended)</option>
+	    </field>
+	    <field name="cacheCompletePath" type="radio" default="no" label="Preserve Folder Structure When Caching" description="IMGEN_CACHECOMPLETEPATH">
+		  <option value="yes">yes</option>
+		  <option value="no">no</option>
+	    </field>				
+    </fieldset>
+</config>

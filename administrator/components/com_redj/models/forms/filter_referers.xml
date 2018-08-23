@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+		<field
+			name="search"
+			type="text"
+			label="COM_REDJ_FILTER"
+			hint="JSEARCH_FILTER_LABEL"
+		/>
+		<field
+			name="decode"
+			type="list"
+			label="COM_REDJ_FILTER_DECODE"
+			description="COM_REDJ_FILTER_DECODE_DESC"
+			onchange="this.form.submit();"
+			default="0"
+			>
+			<option value="0">COM_REDJ_SHOW_RAW_ENTRIES</option>
+			<option value="1">COM_REDJ_SHOW_DECODED_ENTRIES</option>
+		</field>
+	</fields>
+	<fields name="list">
+		<field
+			name="fullordering"
+			type="list"
+			label="JGLOBAL_SORT_BY"
+			description="JGLOBAL_SORT_BY"
+			onchange="this.form.submit();"
+			default="r.id ASC"
+			>
+			<option value="">JGLOBAL_SORT_BY</option>
+			<option value="r.id ASC">COM_REDJ_HEADING_REFERERS_ID_ASC</option>
+			<option value="r.id DESC">COM_REDJ_HEADING_REFERERS_ID_DESC</option>
+			<option value="rv.visited_url ASC">COM_REDJ_HEADING_REFERERS_VISITED_URL_ASC</option>
+			<option value="rv.visited_url DESC">COM_REDJ_HEADING_REFERERS_VISITED_URL_DESC</option>
+			<option value="rr.referer_url ASC">COM_REDJ_HEADING_REFERERS_REFERER_URL_ASC</option>
+			<option value="rr.referer_url DESC">COM_REDJ_HEADING_REFERERS_REFERER_URL_DESC</option>
+			<option value="rr.domain ASC">COM_REDJ_HEADING_REFERERS_DOMAIN_ASC</option>
+			<option value="rr.domain DESC">COM_REDJ_HEADING_REFERERS_DOMAIN_DESC</option>
+			<option value="r.hits ASC">COM_REDJ_HEADING_REFERERS_HITS_ASC</option>
+			<option value="r.hits DESC">COM_REDJ_HEADING_REFERERS_HITS_DESC</option>
+			<option value="r.last_visit ASC">COM_REDJ_HEADING_REFERERS_LAST_VISIT_ASC</option>
+			<option value="r.last_visit DESC">COM_REDJ_HEADING_REFERERS_LAST_VISIT_DESC</option>
+		</field>
+		<field
+			name="limit"
+			type="limitbox"
+			class="input-mini"
+			default="25"
+			label="COM_REDJ_LIST_LIMIT"
+			description="COM_REDJ_LIST_LIMIT_DESC"
+			onchange="this.form.submit();"
+		/>
+	</fields>
+</form>

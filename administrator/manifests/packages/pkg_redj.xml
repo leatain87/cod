@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="3.0">
+    <name>ReDJ</name>
+    <author>selfget.com</author>
+    <creationDate>January 2016</creationDate>
+    <copyright>Copyright (C) 2009 - 2016 selfget.com</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <authorEmail>info@selfget.com</authorEmail>
+    <authorUrl>http://www.selfget.com</authorUrl>
+    <packagename>redj</packagename>
+    <version>1.7.10</version>
+    <url>http://www.selfget.com</url>
+    <packager>selfget.com</packager>
+    <packagerurl>http://www.selfget.com</packagerurl>
+    <description>ReDJ package</description>
+    <update>http://www.selfget.com/redj/update</update>
+    <files>
+        <file type="component" id="com_redj">com_redj.zip</file>
+        <file type="plugin" id="redj" group="system">plg_sys_redj.zip</file>
+    </files>
+</extension>

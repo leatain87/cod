@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5.0" method="upgrade">
+	<name>Imgen</name>
+	<creationDate>April 2013</creationDate>
+	<author>Fiona Coulter</author>
+	<authorEmail>joomla - at - iswebdesign.co.uk</authorEmail>
+	<authorUrl>http://www.spiralscripts.co.uk</authorUrl>
+	<copyright>Copyright © 2011 - All rights reserved.</copyright>
+	<license>GNU/GPL</license>
+	<version>2.1.2</version>
+	<description><![CDATA[Image generator component for Joomla - resizes and compresses images]]></description>
+	<files folder="frontend">
+		<filename>index.html</filename>
+		<filename>imgen.php</filename>
+		<filename>controller.php</filename>
+		<folder>views</folder>
+		<folder>helpers</folder>
+		<folder>assets</folder>
+		<folder>controllers</folder>
+		<folder>classes</folder>
+	</files>
+    <scriptfile>install.imgen.php</scriptfile>	  
+	
+	<!-- Language frontend -->
+	<languages folder="languages-front">
+		<language tag="en-GB">en-GB/en-GB.com_imgen.ini</language>
+	</languages>
+	<administration>
+		<menu>COM_IMGEN</menu>
+		<files folder="backend">
+			<filename>index.html</filename>
+			<filename>imgen.php</filename>
+			<filename>controller.php</filename>
+			<filename>CHANGELOG.php</filename>
+			<filename>config.xml</filename>
+			<filename>views/index.html</filename>
+			<filename>views/imgen/index.html</filename>
+			<filename>views/imgen/view.html.php</filename>
+			<filename>views/imgen/tmpl/index.html</filename>
+			<filename>views/imgen/tmpl/default.php</filename>
+			<filename>assets/index.html</filename>
+			<filename>assets/images/index.html</filename>
+		</files>
+		<!-- Language backend -->
+		<languages folder="languages-admin">
+			<language tag="en-GB">en-GB/en-GB.com_imgen.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_imgen.sys.ini</language>
+		</languages>
+	</administration>
+    <updateservers>
+        <server type="extension" priority="1" name="Imgen">http://spiralextensions.co.uk/updates/imgen.xml</server>
+    </updateservers>		
+</extension>
